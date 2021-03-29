@@ -4,6 +4,15 @@ import pandas as pd
 from .dataiku_secrets import get_credentials
 
 def get_customers(with_labels):
+    '''
+    Return customers from third part CRM
+    
+    Parameters:
+        with_labels (bool): whether or not retrieving customers where the ground truth is known.
+    
+    Returns:
+        pd.DataFrame: all customers matching the search criteria.
+    '''
 
     headers = {'Authorization': 'Basic ' + get_credentials('customers')}
     payload = {} 
