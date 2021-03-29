@@ -1,3 +1,4 @@
+import dataiku
 import requests
 import pandas as pd
 from .dataiku_secrets import get_credentials
